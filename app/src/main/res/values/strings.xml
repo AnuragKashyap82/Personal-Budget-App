@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">PersonalCare</string>
+
+    <string-array name="items">
+
+        <item>Select Item</item>
+        <item>Transport</item>
+        <item>Food</item>
+        <item>House</item>
+        <item>Entertainment</item>
+        <item>Education</item>
+        <item>Charity</item>
+        <item>Apparel</item>
+        <item>Health</item>
+        <item>Personal</item>
+        <item>Others</item>
+
+    </string-array>
+</resources>

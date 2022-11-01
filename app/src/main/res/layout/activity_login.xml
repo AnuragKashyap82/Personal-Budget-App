@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    tools:context=".LoginActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        app:cardCornerRadius="20dp"
+        android:elevation="26dp"
+        android:background="@color/white"
+        android:layout_centerInParent="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Log in to Budget"
+                android:textColor="@color/black"
+                android:fontFamily="@font/nuniti_bold"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                android:textSize="22dp"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/noAccountTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"
+                android:text="Don't have an account?Sign Up"
+                android:textColor="@color/black"
+                android:fontFamily="@font/nunito_light"
+                android:layout_below="@id/tv"
+                android:layout_centerHorizontal="true"/>
+
+
+            <TextView
+                android:id="@+id/emailTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:fontFamily="@font/nuniti_bold"
+                android:textColor="@color/black"
+                android:layout_below="@id/noAccountTv"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:id="@+id/emailEt"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/shape_rect_01"
+                android:layout_below="@id/emailTv"
+                android:layout_marginStart="25sp"
+                android:textColor="@color/black"
+                android:paddingStart="12sp"
+                android:importantForAutofill="no"
+                android:paddingEnd="12sp"
+                android:fontFamily="@font/nunito_light"
+                android:inputType="textEmailAddress"
+                android:includeFontPadding="false"
+                android:layout_marginEnd="25sp"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:id="@+id/passTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:fontFamily="@font/nuniti_bold"
+                android:textColor="@color/black"
+                android:layout_below="@id/emailEt"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="16dp"/>
+
+            <EditText
+                android:id="@+id/passwordEt"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/shape_rect_01"
+                android:layout_below="@id/passTv"
+                android:layout_marginStart="25sp"
+                android:inputType="textPassword"
+                android:textColor="@color/black"
+                android:fontFamily="@font/nunito_light"
+                android:paddingStart="12sp"
+                android:includeFontPadding="false"
+                android:layout_marginEnd="25sp"
+                android:drawableEnd="@drawable/ic_password_toggle"
+                android:paddingEnd="8dp"
+                android:drawablePadding="12sp"
+                android:layout_marginTop="4dp"/>
+
+            <Button
+                android:id="@+id/loginBtn"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/shape_rect_02"
+                android:textColor="@color/white"
+                android:text="Log In"
+                android:textAllCaps="false"
+                android:fontFamily="@font/nuniti_bold"
+                android:includeFontPadding="false"
+                android:layout_below="@id/passwordEt"
+                android:layout_marginStart="26dp"
+                android:layout_marginEnd="26dp"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/forgotTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:textSize="12sp"
+                android:layout_marginTop="12sp"
+                android:text="Forgot Password?"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/nuniti_bold"
+                android:layout_below="@id/loginBtn"
+                android:layout_centerHorizontal="true"/>
+
+            <LinearLayout
+                android:id="@+id/orLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginStart="27dp"
+                android:layout_marginEnd="27dp"
+                android:weightSum="2"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:layout_marginTop="12sp"
+                android:layout_below="@id/forgotTv">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/gray01"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="or"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/nuniti_bold"
+                    android:textColor="@color/black"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/gray01"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/googleLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/orLl"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="12sp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_rect_01"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="4dp"
+                    android:fontFamily="@font/nuniti_bold"
+                    android:layout_below="@id/noAccountTv"
+                    android:text="Sign in with Google"
+                    android:drawableStart="@drawable/google"
+                    android:drawablePadding="12sp"
+                    android:padding="12sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/facebook"
+                    android:background="@drawable/shape_rect_01"
+                    android:padding="12sp"
+                    android:layout_marginStart="4dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:layout_below="@id/noAccountTv"/>
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/progress_bg"
+                android:backgroundTint="@color/white"
+                android:padding="8dp"
+                android:elevation="26dp"
+                android:layout_centerInParent="true"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</RelativeLayout>

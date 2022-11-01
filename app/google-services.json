@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "819524723189",
+    "project_id": "personalcare-6937a",
+    "storage_bucket": "personalcare-6937a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:819524723189:android:57bfa2d169ef2a660c00bc",
+        "android_client_info": {
+          "package_name": "kashyap.anurag.personalcare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "819524723189-ae3j3pr48k07qtd3ku1vc4ambm98erd4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4mkqlRGiFmyMppRndALzMefh5B3tn3Rw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "819524723189-ae3j3pr48k07qtd3ku1vc4ambm98erd4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,1009 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".WeeklyAnalyticActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/toolBarRl"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary">
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_back_black"
+                android:padding="8dp"
+                app:tint="@color/white"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weekly Analytics"
+                android:fontFamily="@font/nuniti_bold"
+                android:textColor="@color/white"
+                android:layout_toEndOf="@id/backBtn"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                android:textAlignment="center"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:id="@+id/totalBudgetAmountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:fontFamily="@font/nuniti_bold"
+                android:textColor="@color/white"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="16dp"
+                android:textAlignment="center"
+                android:textSize="16dp"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/boarder_black"
+            android:padding="2dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="18dp"
+                android:src="@drawable/green"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="L 50 %"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/nunito_light"
+                android:layout_gravity="center_vertical"
+                android:textSize="12sp"
+                android:textColor="#000"
+                />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="18dp"
+                android:src="@drawable/brown"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="G=50% L=100%"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/nunito_light"
+                android:layout_gravity="center_vertical"
+                android:textSize="12sp"
+                android:textColor="#000"
+                />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="18dp"
+                android:src="@drawable/red"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="G 100 %"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/nunito_light"
+                android:layout_gravity="center_vertical"
+                android:textSize="12sp"
+                android:textColor="#000"
+                />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/linearLayoutTransport"
+                        android:layout_margin="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout"
+                            android:orientation="vertical"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Transport"
+                                android:fontFamily="@font/nuniti_bold"
+                                android:textColor="#000"
+                                android:textStyle="bold"
+                                android:textSize="16dp"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="00.00"
+                                android:fontFamily="@font/nuniti_bold"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+                                android:id="@+id/analyticsTransportAmount"
+                                />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:text="status"
+                                    android:textSize="12sp"
+                                    android:textColor="#000"
+                                    android:id="@+id/progress_ratio_transport"
+                                    />
+                                <ImageView
+                                    android:id="@+id/status_Image_transport"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="18dp"
+                                    android:layout_marginTop="5dp"
+                                    />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Today"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/nunito_light"
+                                android:textColor="#000"
+
+                                />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:padding="12sp"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_transport" />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/linearLayoutFood"
+                        android:layout_margin="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout1"
+                            android:orientation="vertical"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Food"
+                                android:textColor="#000"
+                                android:fontFamily="@font/nuniti_bold"
+                                android:textStyle="bold"
+                                android:textSize="16dp"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="00.00"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/nuniti_bold"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+                                android:id="@+id/analyticsFoodAmount"
+                                />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:text="status"
+                                    android:textSize="12sp"
+                                    android:fontFamily="@font/nunito_light"
+                                    android:textColor="#000"
+                                    android:id="@+id/progress_ratio_food"
+                                    />
+                                <ImageView
+                                    android:id="@+id/status_Image_food"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="18dp"
+                                    android:layout_marginTop="5dp"
+                                    />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Today"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/nunito_light"
+                                android:textColor="#000"
+
+                                />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:padding="12sp"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_food" />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/linearLayoutFoodHouse"
+                        android:layout_margin="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout2"
+                            android:orientation="vertical"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="House Expenses"
+                                android:fontFamily="@font/nuniti_bold"
+                                android:textColor="#000"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="00.00"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/nuniti_bold"
+                                android:textColor="#000"
+                                android:id="@+id/analyticsHouseExpensesAmount"
+                                />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:text="status"
+                                    android:textSize="12sp"
+                                    android:textColor="#000"
+                                    android:fontFamily="@font/nuniti_bold"
+                                    android:id="@+id/progress_ratio_house"
+                                    />
+                                <ImageView
+                                    android:id="@+id/status_Image_house"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="18dp"
+                                    android:layout_marginTop="5dp"
+                                    />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Today"
+                                android:textSize="12sp"
+                                android:textColor="#000"
+                                android:fontFamily="@font/nuniti_bold"
+                                />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:padding="12sp"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_house" />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/linearLayoutEntertainment"
+                        android:layout_margin="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout3"
+                            android:orientation="vertical"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Entertainment"
+                                android:textColor="#000"
+                                android:fontFamily="@font/nuniti_bold"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="00.00"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+                                android:fontFamily="@font/nuniti_bold"
+                                android:id="@+id/analyticsEntertainmentAmount"
+                                />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:text="status"
+                                    android:textSize="12sp"
+                                    android:fontFamily="@font/nuniti_bold"
+                                    android:textColor="#000"
+                                    android:id="@+id/progress_ratio_ent"
+                                    />
+                                <ImageView
+                                    android:id="@+id/status_Image_ent"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="18dp"
+                                    android:layout_marginTop="5dp"
+                                    />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Today"
+                                android:fontFamily="@font/nuniti_bold"
+                                android:textSize="12sp"
+                                android:textColor="#000"
+
+                                />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:padding="12sp"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_entertainment" />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/linearLayoutEducation"
+                        android:layout_margin="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout4"
+                            android:orientation="vertical"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Education"
+                                android:textColor="#000"
+                                android:fontFamily="@font/nuniti_bold"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="00.00"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+                                android:fontFamily="@font/nuniti_bold"
+                                android:id="@+id/analyticsEducationAmount"
+                                />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:text="status"
+                                    android:textSize="12sp"
+                                    android:textColor="#000"
+                                    android:fontFamily="@font/nuniti_bold"
+                                    android:id="@+id/progress_ratio_edu"
+                                    />
+                                <ImageView
+                                    android:id="@+id/status_Image_edu"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="18dp"
+                                    android:layout_marginTop="5dp"
+                                    />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Today"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/nuniti_bold"
+                                android:textColor="#000"
+
+                                />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="10dp"
+                            android:padding="12sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_education" />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/linearLayoutCharity"
+                        android:layout_margin="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout5"
+                            android:orientation="vertical"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Charity"
+                                android:fontFamily="@font/nuniti_bold"
+                                android:textColor="#000"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="00.00"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/nuniti_bold"
+                                android:textColor="#000"
+                                android:id="@+id/analyticsCharityAmount"
+                                />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:text="status"
+                                    android:fontFamily="@font/nuniti_bold"
+                                    android:textSize="12sp"
+                                    android:textColor="#000"
+                                    android:id="@+id/progress_ratio_cha"
+                                    />
+                                <ImageView
+                                    android:id="@+id/status_Image_cha"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="18dp"
+                                    android:layout_marginTop="5dp"
+                                    />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Today"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/nuniti_bold"
+                                android:textColor="#000"
+
+                                />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:padding="12sp"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_consultancy" />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/linearLayoutApparel"
+                        android:layout_margin="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout6"
+                            android:orientation="vertical"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Apparel and Services"
+                                android:textColor="#000"
+                                android:fontFamily="@font/nuniti_bold"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="00.00"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/nuniti_bold"
+                                android:textColor="#000"
+                                android:id="@+id/analyticsApparelAmount"
+                                />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:text="status"
+                                    android:fontFamily="@font/nuniti_bold"
+                                    android:textSize="12sp"
+                                    android:textColor="#000"
+                                    android:id="@+id/progress_ratio_app"
+                                    />
+                                <ImageView
+                                    android:id="@+id/status_Image_app"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="18dp"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/nuniti_bold"
+                                    />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Today"
+                                android:fontFamily="@font/nuniti_bold"
+                                android:textSize="12sp"
+                                android:textColor="#000"
+
+                                />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="10dp"
+                            android:padding="12sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_shirt" />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/linearLayoutHealth"
+                        android:layout_margin="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout7"
+                            android:orientation="vertical"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Health"
+                                android:textColor="#000"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:fontFamily="@font/nuniti_bold"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="00.00"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+                                android:fontFamily="@font/nuniti_bold"
+                                android:id="@+id/analyticsHealthAmount"
+                                />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:text="status"
+                                    android:textSize="12sp"
+                                    android:fontFamily="@font/nuniti_bold"
+
+                                    android:textColor="#000"
+                                    android:id="@+id/progress_ratio_hea"
+                                    />
+                                <ImageView
+                                    android:id="@+id/status_Image_hea"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="18dp"
+                                    android:layout_marginTop="5dp"
+                                    />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Today"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/nuniti_bold"
+                                android:textColor="#000"
+
+                                />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:padding="12sp"
+                            android:layout_alignParentEnd="true"
+                            android:fontFamily="@font/nuniti_bold"
+                            android:src="@drawable/ic_health" />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/linearLayoutPersonalExp"
+                        android:layout_margin="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout8"
+                            android:orientation="vertical"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Personal Expenses"
+                                android:textColor="#000"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/nuniti_bold"
+                                android:textSize="16sp"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="00.00"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+                                android:fontFamily="@font/nuniti_bold"
+                                android:id="@+id/analyticsPersonalExpensesAmount"
+                                />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:text="status"
+                                    android:fontFamily="@font/nuniti_bold"
+                                    android:textSize="12sp"
+                                    android:textColor="#000"
+                                    android:id="@+id/progress_ratio_per"
+                                    />
+                                <ImageView
+                                    android:id="@+id/status_Image_per"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/nuniti_bold"
+                                    android:layout_height="18dp"
+                                    android:layout_marginTop="5dp"
+                                    />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Today"
+                                android:fontFamily="@font/nuniti_bold"
+                                android:textSize="12sp"
+                                android:textColor="#000"
+
+                                />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:padding="12sp"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_personalcare" />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/linearLayoutOther"
+                        android:layout_margin="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout9"
+                            android:orientation="vertical"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Other"
+                                android:textColor="#000"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/nuniti_bold"
+                                android:textSize="16sp"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="00.00"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+                                android:fontFamily="@font/nuniti_bold"
+                                android:id="@+id/analyticsOtherAmount"
+                                />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:text="status"
+                                    android:textSize="12sp"
+                                    android:fontFamily="@font/nuniti_bold"
+                                    android:textColor="#000"
+                                    android:id="@+id/progress_ratio_oth"
+                                    />
+                                <ImageView
+                                    android:id="@+id/status_Image_oth"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="18dp"
+                                    android:fontFamily="@font/nuniti_bold"
+                                    android:layout_marginTop="5dp"
+
+                                    />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Today"
+                                android:fontFamily="@font/nuniti_bold"
+                                android:textSize="12sp"
+                                android:textColor="#000"
+
+                                />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:padding="12sp"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_other" />
+
+                    </RelativeLayout>
+
+                    <com.anychart.AnyChartView
+                        android:id="@+id/anyChartView"
+                        android:layout_width="match_parent"
+                        android:layout_height="600dp"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Rl"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="20dp">
+
+                        <LinearLayout
+                            android:id="@+id/ll10"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Summary Spending Status"
+                                android:fontFamily="@font/nuniti_bold"
+                                android:textColor="@color/black"
+                                android:textSize="16dp"/>
+
+                            <TextView
+                                android:id="@+id/monthSpentAmount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Summary Spending Status"
+                                android:fontFamily="@font/nuniti_bold"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/monthRatioSpending"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/black"
+                                    android:text="status"
+                                    android:fontFamily="@font/nunito_light"/>
+
+                                <ImageView
+                                    android:id="@+id/month_ratio_iv"
+                                    android:layout_width="0dp"
+                                    android:layout_height="18dp"
+                                    android:layout_weight="1"
+                                    android:layout_marginTop="5dp"/>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Today"
+                                android:fontFamily="@font/nuniti_bold"
+                                android:textSize="12sp"
+                                android:textColor="#000"/>
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:padding="12sp"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/today" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
